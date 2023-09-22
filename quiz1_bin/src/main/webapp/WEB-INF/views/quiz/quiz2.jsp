@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1> Quiz2 화면</h1>
-<form action="/quiz/quiz2" method="post">
+<form action="/quiz/result" method="post">
 	1번<input type="number" name="num1"/>
 	2번<input type="number" name="num2"/>
 	<input type="submit" value="전송">

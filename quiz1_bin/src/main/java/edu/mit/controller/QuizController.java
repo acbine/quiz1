@@ -1,16 +1,22 @@
 package edu.mit.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import edu.miit.vo.TwoVO;
+import edu.mit.service.QuizService;
+import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 
 @Controller
 @Log4j
+@AllArgsConstructor //생성주 주입
 public class QuizController {
+	
+	private QuizService service;
 	
 	@GetMapping("/quiz/quiz1")
 	void quiz1(Model model) {
@@ -39,6 +45,22 @@ public class QuizController {
 		log.info("post 요청받음");
 		log.info("------수집된되고 ------"+vo);
 		
+		
+	}
+	
+	@PostMapping("/quiz/result")
+	String result(Model model,TwoVO vo) {
+		log.info("---result 포스트 요청--");
+		log.info("------수집된되고 ------"+vo);
+		service.addUP(vo);
+		service.evenAddUp(vo);
+		
+		model.addAttribute("addUP",service.addUP(vo));
+		model.addAttribute("evenAddUp",service.evenAddUp(vo));
+		return "/quiz/result";
+		
+		
+	
 		
 	}
 

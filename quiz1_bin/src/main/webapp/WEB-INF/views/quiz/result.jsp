@@ -7,10 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1> Quiz2 post화면</h1>
+<h1>  결과창 </h1>
 <form>
-	el num1 ${num1} <br>
-	el num2 ${num2}
+	addUP ${addUP} <br>
+	evenAddUp ${evenAddUp}
 </form>
 
 </body>
