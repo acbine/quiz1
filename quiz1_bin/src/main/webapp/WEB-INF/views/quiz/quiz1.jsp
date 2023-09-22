@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>오늘은 금요일</h1>
+<h1>${quiz}</h1>
 </body>
 </html>
