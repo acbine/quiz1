@@ -18,7 +18,7 @@ public class MyBatisTest {
 	private SqlSessionFactory sqlSessionFactory;
 	
 	@Test
-	public void testMyBatis() {
+	public void testMyBatis() {// 자바에서 DB를 연결할떄처럼 이것은 mybatis에 연결해준다
 		SqlSession session=sqlSessionFactory.openSession();
 		session.getConnection();
 	}
